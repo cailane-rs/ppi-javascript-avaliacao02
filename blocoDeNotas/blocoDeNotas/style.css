@@ -1,0 +1,55 @@
+body {
+    padding: 20px;
+}
+
+.card{ 
+    margin: 10px;
+}
+
+.new-card {
+    padding: 20px;
+    width: 20%;
+    height: min-content;
+    /* background-color: rgb(255, 236, 201); */
+    background-color: aliceblue;
+
+}
+
+.btn-salver {
+    width: 100px;
+    height: 40px;
+    margin-top: 10px;
+
+}
+
+.ContainerPai{
+    display: flex;
+    flex-direction: row ; 
+    /* background-color: red; */
+}
+
+.lista-notas { 
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;  
+    padding: 10px;
+    margin: 10px; 
+    margin-top: 0px;
+    padding-top: 0px;
+    width: 80%;
+    height: auto; 
+    /* background: blue; */
+}
+
+.card-criados {
+    padding: 5px; 
+}
+
+.card-img-top{
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+}
+
+
+ 

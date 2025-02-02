@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/calculadora.css">
+</head>
+
+<body>
+    <!-- Your content here -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <div class="container borderblack areaCalculadora">
+        <input id="calcInput" class="form-control form-control-lg inputCalc" type="text" placeholder=".">
+        <div>
+            <button id="add" type="button" class="btn btn-secondary botaoPadrao1">+</button>
+            <button id="subtract" type="button" class="btn btn-secondary botaoPadrao1">-</button>
+            <button id="multiply" type="button" class="btn btn-secondary botaoPadrao1">*</button>
+            <button id="divide" type="button" class="btn btn-secondary botaoPadrao1">/</button>
+        </div>
+        <div>
+        </div>
+
+        <div class="blocoCentralizador">
+            <div class="blocoAEsquerda">
+                <div>
+                    <button id="9" type="button" class="btn btn-light botaoPadrao1">9</button>
+                    <button id="8" type="button" class="btn btn-light botaoPadrao1">8</button>
+                    <button id="7" type="button" class="btn btn-light botaoPadrao1">7</button>
+                </div>
+                <div>
+                    <button id="6" type="button" class="btn btn-light botaoPadrao1">6</button>
+                    <button id="5" type="button" class="btn btn-light botaoPadrao1">5</button>
+                    <button id="4" type="button" class="btn btn-light botaoPadrao1">4</button>
+                </div>
+                <div>
+                    <button id="3" type="button" class="btn btn-light botaoPadrao1">3</button>
+                    <button id="2" type="button" class="btn btn-light botaoPadrao1">2</button>
+                    <button id="1" type="button" class="btn btn-light botaoPadrao1">1</button>
+                </div>
+                <div>
+                    <button id="0" type="button" class="btn btn-light botaoPadrao1">0</button>
+                    <button type="button" class="btn btn-light botaoPadrao1">.</button>
+                    <button id="C" type="button" class="btn btn-light botaoPadrao1">C</button>
+                </div>
+            </div>
+            <div class="blocoADireita">
+                <button id="equals" type="button" class="btn btn-primary botaoIgual">=</button>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.getElementById('add').addEventListener('click', function() {
+            document.getElementById('calcInput').value += '+';
+        });
+        document.getElementById('subtract').addEventListener('click', function() {
+            document.getElementById('calcInput').value += '-';
+        });
+        document.getElementById('multiply').addEventListener('click', function() {
+            document.getElementById('calcInput').value += '*';
+        });
+        document.getElementById('divide').addEventListener('click', function() {
+            document.getElementById('calcInput').value += '/';
+        });
+        document.getElementById('C').addEventListener('click', function(){
+            document.getElementById('calcInput').value = '';
+        });
+        document.getElementById('0').addEventListener('click', function() {
+            document.getElementById('calcInput').value += '0';
+        });
+        document.getElementById('1').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '1';
+        });
+        document.getElementById('2').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '2';
+        });
+        document.getElementById('3').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '3';
+        });
+        document.getElementById('4').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '4';
+        });
+        document.getElementById('5').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '5';
+        });
+        document.getElementById('6').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '6';
+        });
+        document.getElementById('7').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '7';
+        });
+        document.getElementById('8').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '8';
+        });
+        document.getElementById('9').addEventListener('click', function(){
+            document.getElementById('calcInput').value += '9';
+        });
+
+
+        document.getElementById('equals').addEventListener('click', function(){ 
+            calculate();
+    });
+
+    function calculate() {
+        const input = document.getElementById('calcInput').value;
+        if (/^[0-9+\-*/.() ]+$/.test(input)) {
+            try {
+                document.getElementById('calcInput').value = eval(input);
+            } catch (e) {
+                alert('Invalid expression');
+            }
+        } else {
+            alert('Invalid characters in input');
+        }
+    }
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Enter') {
+            calculate();
+        }
+    });
+    </script>
+
+</body>
+
+</html>

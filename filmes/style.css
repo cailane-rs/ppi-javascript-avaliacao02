@@ -1,0 +1,68 @@
+body{
+    background-color: rgb(34, 13, 48);
+}
+
+#listaFilmes{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+}
+
+@media (max-width: 768px) {
+    body{
+        margin-bottom: 250px;
+    }
+
+    #listaFilmes {
+        flex-direction: column;
+        align-items: center;
+        overflow-y: auto; 
+    }
+
+    .card{
+        margin: 10px;
+        background-color:  rgb(206, 168, 231);
+        width: 15rem;
+        height: 25rem;
+    }
+}
+
+.input-group{
+    margin: 20px auto;
+    width: 70vw;
+}
+
+.btn{
+    background-color: rgb(168, 119, 224);
+    color: black;
+    font-weight: 500;
+}
+
+.text-end{
+    margin-right: 30px;
+    color: rgb(168, 119, 224);
+}
+
+.card{
+    margin: 10px;
+    background-color:  rgb(206, 168, 231);
+    width: 15rem;
+    height: 25rem;
+    overflow: hidden; 
+}
+
+.card-img-top{
+    max-height: 70%;
+    height: 60%;
+    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
+}
+
+.img-movie-not-found{
+    max-height: 70%;
+    height: 60%;
+    object-fit: cover;
+    width: 100%;
+    object-fit: contain;
+}
