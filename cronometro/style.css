@@ -1,0 +1,51 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: "Courier New", Courier, monospace;
+}
+#temporizador{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#timer, #paradas {
+    width: 100%;
+    max-width: 60vw;
+    flex: 1 1 40vw;
+}
+#timer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* horizontal */
+    align-items: center; /* vertical */
+    height: 100vh;
+    background-color: rgb(104, 104, 104) ;
+}
+#paradas{
+    background-color: rgb(165, 165, 165);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+#paradas_titulo{
+    display: flex;
+    justify-content: center;
+}
+#registros{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-left: 1vw;
+}
+#zerar{
+    margin: 2%;
+    font-weight: bold;
+}
+#contador{
+    font-weight: bold;
+}
+#legenda{
+    margin-top: 1vw;
+}
